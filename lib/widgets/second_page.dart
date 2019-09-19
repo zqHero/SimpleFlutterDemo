@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutterdemo/widgets/secondpages/cupertino_activity_indictor.dart';
 
 //展示列表数据
 final items = <ListItem>[

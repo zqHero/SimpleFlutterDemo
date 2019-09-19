@@ -18,7 +18,7 @@ export 'widgets/first_pages/layout/wrap_page.dart';
 export 'widgets/first_pages/layout/all_layout_demo_page.dart';
 
 //IOS 风格模块 路由
-export 'widgets/secondpages/cupertino.dart';
-export 'widgets/secondpages/cupertino_activity_indictor.dart';
-export 'widgets/secondpages/cupertino_alert_dialog.dart';
-export 'widgets/secondpages/cupertino_button_page.dart';
+export 'widgets/second_pages/cupertino.dart';
+export 'widgets/second_pages/cupertino_activity_indictor.dart';
+export 'widgets/second_pages/cupertino_alert_dialog.dart';
+export 'widgets/second_pages/cupertino_button_page.dart';
