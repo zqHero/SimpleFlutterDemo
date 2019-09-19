@@ -1,5 +1,18 @@
 //所有  界面跳转路由配置类
 
+//所有-工具类==========================================：
+export './utils/toast_utils.dart';
+
+//==========================Widget组件==============================================
+//homePage 主界面组件：=============================================================
+export 'widgets/first_page.dart';
+export 'widgets/second_page.dart';
+export 'widgets/forth_page.dart';
+export 'widgets/third_page.dart';
+
+
+//============================page界面===============================================
+//firstPage 第一个模块用到的路由：------------------------------------
 //layout 路由:
 export 'widgets/first_pages/layout/grid_view_page.dart';
 export 'widgets/first_pages/layout/table_page.dart';

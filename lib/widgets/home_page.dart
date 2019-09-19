@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' as prefix0;
-import 'package:flutterdemo/utils/toast_utils.dart';
-import 'package:flutterdemo/widgets/first_page.dart';
-import 'package:flutterdemo/widgets/forth_page.dart';
-import 'package:flutterdemo/widgets/second_page.dart';
-import 'package:flutterdemo/widgets/third_page.dart';
+import '../routes.dart';
 
 class HomePage extends StatefulWidget {
   @override

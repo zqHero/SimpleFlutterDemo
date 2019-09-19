@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutterdemo/widgets/second_page.dart';
 
 const tabTextStyle = TextStyle(
   fontSize: 2,
@@ -16,7 +15,7 @@ class ItemView {
 }
 
 //item
-const List<ItemView> items = const <ItemView>[
+const List<ItemView> _items = const <ItemView>[
   ItemView(
       index: 0,
       title: const Text('Git', style: tabTextStyle),
@@ -49,19 +48,19 @@ class FirstPage extends StatelessWidget {
     // TODO: implement build
     return new Scaffold(
       body: new DefaultTabController(
-          length: items.length,
+          length: _items.length,
           child: new Scaffold(
 //            backgroundColor: Colors.white,
             appBar: new TabBar(
               indicatorColor: Colors.blue, //选中时下划线颜色,如果使用了indicator这里设置无效
               labelColor: Colors.blue,
-              tabs: items.map((ItemView item) {
+              tabs: _items.map((ItemView item) {
                 return new Tab(
                     text: item.title.data, icon: new Icon(item.icon));
               }).toList(),
             ),
             body: new TabBarView(
-              children: items.map((ItemView item) {
+              children: _items.map((ItemView item) {
                 return new Padding(
                   padding: const EdgeInsets.all(3),
                   child: getItemView(item),

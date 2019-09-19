@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 //展示列表数据
-final items = <ListItem>[
+final _items = <ListItem>[
   new ListItem("CupertinoActivityIndicator组件", "CupertinoActivityIndicator"),
   new ListItem("CupertinoAlertDialog组件", "CupertinoAlertDialog"),
   new ListItem("CupertinoButton组件", "CupertinoButton"),
@@ -20,9 +20,9 @@ class SecondPage extends StatelessWidget {
 
   getItemsWidgets(BuildContext context) {
     var widgets = <Widget>[];
-    for (var i = 0; i < items.length; i++) {
-      String title = items[i].title;
-      String route = items[i].route;
+    for (var i = 0; i < _items.length; i++) {
+      String title = _items[i].title;
+      String route = _items[i].route;
       widgets.add(new Container(
           color: Colors.grey[300],
           padding: EdgeInsets.only(top: 0.5),

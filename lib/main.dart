@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'widgets/home_page.dart';
-import 'reutes.dart';
+import 'routes.dart';
 
 //widget 路由
 import 'widgets/first_pages/widgets/material_button_page.dart';
