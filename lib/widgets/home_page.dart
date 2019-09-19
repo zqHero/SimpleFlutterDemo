@@ -20,6 +20,7 @@ class HomePageState extends State<HomePage> {
   List<String> bottomBarTxt = ["Material", "Cupertino", "聊天", "其他"];
 
   bool showDialog = false;
+  GlobalKey<ScaffoldState> _homeScaffoldKey = new GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,7 @@ class HomePageState extends State<HomePage> {
     return ConstrainedBox(
         constraints: BoxConstraints.expand(),
         child: new Scaffold(
-          key: Key("homePage_scaffold_key"),
+          key: _homeScaffoldKey,
           appBar: new AppBar(
             title: new Text(tabBarTxts[bottomNavIndex]),
             actions: <Widget>[
@@ -191,10 +192,10 @@ class HomePageState extends State<HomePage> {
             print(val);
           });
         } else if (selectedItem.index == 2) {
-          //show SnackBar  TODO   ==================================
-          Scaffold.of(context).showSnackBar(new SnackBar(
+          //show SnackBar  TODO    为什么bug==================================
+          _homeScaffoldKey.currentState.showSnackBar(new SnackBar(
             duration: Duration(seconds: 2),
-            content: new Text("this is snackBar"),
+            content: new Text("this is a snackBar"),
           ));
         }
       },
@@ -223,7 +224,9 @@ class HomePageState extends State<HomePage> {
           highlightElevation: 14,
           //点击阴影值
           isExtended: false,
-          onPressed: () { ToastUtil.toast(context, "this is a simple app about flutter");});
+          onPressed: () {
+            ToastUtil.toast(context, "this is a simple app about flutter");
+          });
     });
   }
 

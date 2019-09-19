@@ -28,8 +28,7 @@ class ToastUtil {
             child: Container(
                 alignment: Alignment.center,
                 width: MediaQuery.of(context).size.width,
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 80.0),
+                child: Center(
                   child: AnimatedOpacity(
                     opacity: _showing ? 1.0 : 0.0, //目标透明度
                     duration: _showing
