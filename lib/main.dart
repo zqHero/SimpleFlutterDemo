@@ -38,6 +38,10 @@ final Map<String, WidgetBuilder> routes = {
 
   "WrapPage": (context) => WrapPage(),
   "AllLayoutDemoPage": (context) => AllLayoutDemoPage(),
+
+  //gesture 组件
+  "GestureDetectorPage":(context)=>GestureDetectorPage(),
+  "DissmissiblePage":(context)=>DissmissiblePage(),
 };
 
 class MyApp extends StatelessWidget {

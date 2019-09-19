@@ -30,6 +30,11 @@ export 'widgets/first_pages/layout/sized_box_page.dart';
 export 'widgets/first_pages/layout/wrap_page.dart';
 export 'widgets/first_pages/layout/all_layout_demo_page.dart';
 
+//gesture 路由
+export 'widgets/first_pages/gesture/gesture_detector_page.dart';
+export 'widgets/first_pages/gesture/dissmissible_page.dart';
+
+
 //IOS 风格模块 路由
 export 'widgets/second_pages/cupertino.dart';
 export 'widgets/second_pages/cupertino_activity_indictor.dart';

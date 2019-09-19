@@ -188,7 +188,7 @@ class HomePageState extends State<HomePage> {
             print(val);
           });
         } else if (selectedItem.index == 2) {
-          //show SnackBar  TODO    为什么bug==================================
+          //show SnackBar
           _homeScaffoldKey.currentState.showSnackBar(new SnackBar(
             duration: Duration(seconds: 2),
             content: new Text("this is a snackBar"),

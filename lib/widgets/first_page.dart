@@ -30,7 +30,7 @@ const List<ItemView> _items = const <ItemView>[
       icon: Icons.directions_boat),
   ItemView(
       index: 3,
-      title: const Text('公交', style: tabTextStyle),
+      title: const Text('GestureD', style: tabTextStyle),
       icon: Icons.directions_bus),
   ItemView(
       index: 4,
@@ -73,91 +73,85 @@ class FirstPage extends StatelessWidget {
   }
 
   Widget getItemView(ItemView item) {
+    List<_ItemList> _items = <_ItemList>[];
     switch (item.index) {
       case 1:
-        return new WidgetPage();
+        //Widget 列表
+        _items = <_ItemList>[
+          _ItemList("AlertDialog", "AlertDialogPage", Icon(Icons.keyboard)),
+          _ItemList("Table", "TablePage", Icon(Icons.print)),
+        ];
+        break;
       case 2:
-        return new LayoutPage();
+        //Layout 列表
+        _items = <_ItemList>[
+          //列表
+          _ItemList("GridView", "GridViewPage", Icon(Icons.keyboard)),
+          _ItemList("Table", "TablePage", Icon(Icons.print)),
+
+          //基本 布局类
+          _ItemList("Align对齐布局", "AlignPage", Icon(Icons.widgets)),
+          _ItemList("FittedBox缩放布局", "FittedBoxPage", Icon(Icons.print)),
+          _ItemList("StackAlignment布局", "StackAlignmentPage", Icon(Icons.home)),
+          _ItemList(
+              "StackPositioned布局", "StackPositionedPage", Icon(Icons.widgets)),
+          _ItemList("IndexedStack布局", "IndexedStackPage", Icon(Icons.map)),
+          _ItemList("OverflowBox布局", "OverflowBoxPage", Icon(Icons.keyboard)),
+          //限制宽高
+          _ItemList("SizedBox限制", "SizedBoxPage", Icon(Icons.title)),
+          _ItemList("ConstranedBox限制", "ConstranedBoxPage", Icon(Icons.print)),
+          _ItemList("LimitedBox限制", "LimitedBoxPage", Icon(Icons.widgets)),
+          _ItemList("AspectRatio调整宽高比", "AspectRatioPage", Icon(Icons.home)),
+          _ItemList("FractionallySizedBox调整宽高比", "FractionallySizedBoxPage",
+              Icon(Icons.map)),
+          //
+          _ItemList("Wrap自动换行布局", "WrapPage", Icon(Icons.title)),
+          //整合 demo
+          _ItemList("LayoutDemo", "AllLayoutDemoPage", Icon(Icons.add)),
+        ];
+        break;
+      case 3:
+        //手势  列表
+        _items = <_ItemList>[
+          _ItemList("GestureDetectorPage手势检测", "GestureDetectorPage", Icon(Icons.widgets)),
+          _ItemList("Dissmissible滑动删除", "DissmissiblePage", Icon(Icons.widgets)),
+        ];
+        break;
       default:
-        return new SelectedView(item: item);
+        return new Card();
     }
+    return new ListPage(items: _items);
   }
 }
 
-class WidgetPage extends StatelessWidget {
-  List<_ItemList> wigetListItems = <_ItemList>[
-    //列表
-    _ItemList("AlertDialog", "AlertDialogPage", Icon(Icons.keyboard)),
-    _ItemList("Table", "TablePage", Icon(Icons.print)),
-  ];
+class ListPage extends StatelessWidget {
+  List<_ItemList> items = <_ItemList>[];
+
+  ListPage({this.items});
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return new SizedBox.expand(
       child: new ListView(
-        children: wigetListItems.map((_ItemList item) {
-          return getListItemView(context,item);
+        children: items.map((_ItemList item) {
+          return new Container(
+            height: 50,
+            color: Colors.white,
+            padding: EdgeInsets.zero,
+            child: ListTile(
+              leading: item.icon,
+              title: new Text("${item.title}"),
+              trailing: Icon(Icons.keyboard_arrow_right),
+              onTap: () {
+                Navigator.pushNamed(context, "${item.route}");
+              },
+            ),
+          );
         }).toList(),
       ),
     );
   }
-}
-
-class LayoutPage extends StatelessWidget {
-  List<_ItemList> layoutItems = <_ItemList>[
-    //列表
-    _ItemList("GridView", "GridViewPage", Icon(Icons.keyboard)),
-    _ItemList("Table", "TablePage", Icon(Icons.print)),
-
-    //基本 布局类
-    _ItemList("Align对齐布局", "AlignPage", Icon(Icons.widgets)),
-    _ItemList("FittedBox缩放布局", "FittedBoxPage", Icon(Icons.print)),
-    _ItemList("StackAlignment布局", "StackAlignmentPage", Icon(Icons.home)),
-    _ItemList(
-        "StackPositioned布局", "StackPositionedPage", Icon(Icons.widgets)),
-    _ItemList("IndexedStack布局", "IndexedStackPage", Icon(Icons.map)),
-    _ItemList("OverflowBox布局", "OverflowBoxPage", Icon(Icons.keyboard)),
-    //限制宽高
-    _ItemList("SizedBox限制", "SizedBoxPage", Icon(Icons.title)),
-    _ItemList("ConstranedBox限制", "ConstranedBoxPage", Icon(Icons.print)),
-    _ItemList("LimitedBox限制", "LimitedBoxPage", Icon(Icons.widgets)),
-    _ItemList("AspectRatio调整宽高比", "AspectRatioPage", Icon(Icons.home)),
-    _ItemList("FractionallySizedBox调整宽高比", "FractionallySizedBoxPage",
-        Icon(Icons.map)),
-    //
-    _ItemList("Wrap自动换行布局", "WrapPage", Icon(Icons.title)),
-    //整合 demo
-    _ItemList("LayoutDemo", "AllLayoutDemoPage", Icon(Icons.add)),
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return new SizedBox.expand(
-      child: new ListView(
-        children: layoutItems.map((_ItemList item) {
-          return getListItemView(context,item);
-        }).toList(),
-      ),
-    );
-  }
-}
-
-Widget getListItemView(BuildContext context,_ItemList item) {
-  return new Container(
-    height: 50,
-    color: Colors.white,
-    padding: EdgeInsets.zero,
-    child: ListTile(
-      leading: item.icon,
-      title: new Text("${item.title}"),
-      trailing: Icon(Icons.keyboard_arrow_right),
-      onTap: () {
-        Navigator.pushNamed(context, "${item.route}");
-      },
-    ),
-  );
 }
 
 class _ItemList {
