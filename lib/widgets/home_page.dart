@@ -12,8 +12,8 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   num bottomNavIndex = 0;
-  List<String> tabBarTxts = ["Material", "Cupertino", "Chat", "Others"];
-  List<String> bottomBarTxt = ["Material", "Cupertino", "聊天", "其他"];
+  List<String> tabBarTxts = ["Material", "Cupertino", "Sdk", "Native"];
+  List<String> bottomBarTxt = ["Material", "Cupertino", "Sdk", "Native"];
 
   bool showDialog = false;
   GlobalKey<ScaffoldState> _homeScaffoldKey = new GlobalKey<ScaffoldState>();
@@ -31,18 +31,7 @@ class HomePageState extends State<HomePage> {
               createPopMenus(context),
             ],
           ),
-          body: new Center(
-            child: Stack(
-              alignment: Alignment.center,
-              children: <Widget>[
-                getBody(bottomNavIndex),
-//                Offstage(
-//                  offstage:showDialog,
-//                  child: getSimpleDialog(),
-//                ),
-              ],
-            ),
-          ),
+          body: getBody(bottomNavIndex),
           bottomNavigationBar:
 //          getBottomNavBar(),  //两种方式实现 navTabBar
               BottomAppBar(
@@ -88,7 +77,7 @@ class HomePageState extends State<HomePage> {
         children: <Widget>[
           //头像
           UserAccountsDrawerHeader(
-            accountName: new Text("zhaoq"),
+            accountName: new Text("zq"),
             accountEmail: new Text("https://blog.csdn.net/u013233097"),
             currentAccountPicture: ClipOval(
               child: SizedBox(

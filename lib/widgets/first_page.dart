@@ -18,7 +18,7 @@ class ItemView {
 const List<ItemView> _items = const <ItemView>[
   ItemView(
       index: 0,
-      title: const Text('Git', style: tabTextStyle),
+      title: const Text('GitPros', style: tabTextStyle),
       icon: Icons.airplay),
   ItemView(
       index: 1,
@@ -30,7 +30,7 @@ const List<ItemView> _items = const <ItemView>[
       icon: Icons.directions_boat),
   ItemView(
       index: 3,
-      title: const Text('GestureD', style: tabTextStyle),
+      title: const Text('GestureDetector', style: tabTextStyle),
       icon: Icons.directions_bus),
   ItemView(
       index: 4,
@@ -54,9 +54,12 @@ class FirstPage extends StatelessWidget {
             appBar: new TabBar(
               indicatorColor: Colors.blue, //选中时下划线颜色,如果使用了indicator这里设置无效
               labelColor: Colors.blue,
+              isScrollable: true,  //设置可以滚动
               tabs: _items.map((ItemView item) {
                 return new Tab(
-                    text: item.title.data, icon: new Icon(item.icon));
+                  text: item.title.data,
+                  icon: new Icon(item.icon),
+                );
               }).toList(),
             ),
             body: new TabBarView(
@@ -113,8 +116,10 @@ class FirstPage extends StatelessWidget {
       case 3:
         //手势  列表
         _items = <_ItemList>[
-          _ItemList("GestureDetectorPage手势检测", "GestureDetectorPage", Icon(Icons.widgets)),
-          _ItemList("Dissmissible滑动删除", "DissmissiblePage", Icon(Icons.widgets)),
+          _ItemList("GestureDetectorPage手势检测", "GestureDetectorPage",
+              Icon(Icons.widgets)),
+          _ItemList(
+              "Dissmissible滑动删除", "DissmissiblePage", Icon(Icons.widgets)),
         ];
         break;
       default:
