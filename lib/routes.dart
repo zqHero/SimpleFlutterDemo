@@ -10,7 +10,6 @@ export 'widgets/second_page.dart';
 export 'widgets/forth_page.dart';
 export 'widgets/third_page.dart';
 
-
 //============================page界面===============================================
 //firstPage 第一个模块用到的路由：------------------------------------
 //layout 路由:
@@ -34,8 +33,18 @@ export 'widgets/first_pages/layout/all_layout_demo_page.dart';
 export 'widgets/first_pages/gesture/gesture_detector_page.dart';
 export 'widgets/first_pages/gesture/dissmissible_page.dart';
 
+//decorated 装饰路由：
+export 'widgets/first_pages/decorated/canvas_page.dart';
+export 'widgets/first_pages/decorated/clip_page.dart';
+export 'widgets/first_pages/decorated/opacity_page.dart';
+export 'widgets/first_pages/decorated/decorated_box_page.dart';
+export 'widgets/first_pages/decorated/rotated_box_page.dart';
 
-//IOS 风格模块 路由
+//aimation 动画路由
+export 'widgets/first_pages/animation/animated_opactity_page.dart';
+export 'widgets/first_pages/animation/hero_page1.dart';
+
+//IOS 风格模块 路由=========================================================================
 export 'widgets/second_pages/cupertino.dart';
 export 'widgets/second_pages/cupertino_activity_indictor.dart';
 export 'widgets/second_pages/cupertino_alert_dialog.dart';

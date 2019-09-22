@@ -49,10 +49,12 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - lib/domain/demo.json
     - lib/imgs/运算符.jpg
     - lib/imgs/类层次结构.png
     - lib/imgs/状态的生命周期.png
     - lib/imgs/demo.jpg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -34,11 +34,11 @@ const List<ItemView> _items = const <ItemView>[
       icon: Icons.directions_bus),
   ItemView(
       index: 4,
-      title: const Text('火车', style: tabTextStyle),
+      title: const Text('Decorated', style: tabTextStyle),
       icon: Icons.directions_railway),
   ItemView(
       index: 5,
-      title: const Text('步行', style: tabTextStyle),
+      title: const Text('Animation', style: tabTextStyle),
       icon: Icons.directions_walk),
 ];
 
@@ -81,7 +81,7 @@ class FirstPage extends StatelessWidget {
       case 1:
         //Widget 列表
         _items = <_ItemList>[
-          _ItemList("AlertDialog", "AlertDialogPage", Icon(Icons.keyboard)),
+          _ItemList("LoadingJsonAssets", "LoadingJsonAssetsPage", Icon(Icons.keyboard)),
           _ItemList("Table", "TablePage", Icon(Icons.print)),
         ];
         break;
@@ -120,6 +120,23 @@ class FirstPage extends StatelessWidget {
               Icon(Icons.widgets)),
           _ItemList(
               "Dissmissible滑动删除", "DissmissiblePage", Icon(Icons.widgets)),
+        ];
+        break;
+      case 4:
+        //手势  列表
+        _items = <_ItemList>[
+          _ItemList("Opacity透明度处理", "OpacityPage", Icon(Icons.widgets)),
+          _ItemList("DecoratedBox装饰盒子", "DecoratedBoxPage", Icon(Icons.home)),
+          _ItemList("RotatedBox旋转盒子", "RotatedBoxPage", Icon(Icons.call)),
+          _ItemList("Clip裁剪处理", "ClipPage", Icon(Icons.print)),
+          _ItemList("Canvas自定义画板", "CanvasPage", Icon(Icons.print)),
+        ];
+        break;
+      case 5:
+      //动画 列表
+        _items = <_ItemList>[
+          _ItemList("AnimatedOpactity渐变动画", "AnimatedOpactityPage", Icon(Icons.widgets)),
+          _ItemList("Hero动画", "HeroPage1", Icon(Icons.print)),
         ];
         break;
       default:

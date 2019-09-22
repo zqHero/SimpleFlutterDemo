@@ -3,7 +3,7 @@ import 'widgets/home_page.dart';
 import 'routes.dart';
 
 //widget 路由
-import 'widgets/first_pages/widgets/material_button_page.dart';
+import 'widgets/first_pages/widgets/loading_json_assets_age.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,7 +17,7 @@ final Map<String, WidgetBuilder> routes = {
   "Cupertino": (context) => CupertinoPage(),
 
   //Widget 基础组件：
-  "AlertDialogPage":(context)=>AlertDialogPage(),
+  "LoadingJsonAssetsPage": (context) => LoadingJsonAssetsPage(),
 
   //Layout 中 引用路由：
   "GridViewPage": (context) => GridViewPage(),
@@ -40,8 +40,19 @@ final Map<String, WidgetBuilder> routes = {
   "AllLayoutDemoPage": (context) => AllLayoutDemoPage(),
 
   //gesture 组件
-  "GestureDetectorPage":(context)=>GestureDetectorPage(),
-  "DissmissiblePage":(context)=>DissmissiblePage(),
+  "GestureDetectorPage": (context) => GestureDetectorPage(),
+  "DissmissiblePage": (context) => DissmissiblePage(),
+
+  // decorated 装饰组件
+  "OpacityPage": (context) => OpacityPage(),
+  "DecoratedBoxPage": (context) => DecoratedBoxPage(),
+  "RotatedBoxPage": (context) => RotatedBoxPage(),
+  "ClipPage": (context) => ClipPage(),
+  "CanvasPage": (context) => CanvasPage(),
+
+  //Animation 动画组件
+  "AnimatedOpactityPage": (context) => AnimatedOpactityPage(),
+  "HeroPage1": (context) => HeroPage1(),
 };
 
 class MyApp extends StatelessWidget {
