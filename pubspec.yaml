@@ -20,6 +20,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+  flutter_webview_plugin: ^0.3.8
+  date_format: ^1.0.6
+
   io: ^0.3.3
   convert: ^2.1.1
 
@@ -54,6 +57,7 @@ flutter:
     - lib/imgs/类层次结构.png
     - lib/imgs/状态的生命周期.png
     - lib/imgs/demo.jpg
+    - lib/imgs/flutter.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

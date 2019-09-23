@@ -4,6 +4,12 @@
 export './utils/toast_utils.dart';
 
 //==========================Widget组件==============================================
+//loadingPage    等待页：
+export 'widgets/loading_page.dart';
+
+//主界面
+export 'widgets/home_page.dart';
+
 //homePage 主界面组件：=============================================================
 export 'widgets/first_page.dart';
 export 'widgets/second_page.dart';
@@ -12,6 +18,9 @@ export 'widgets/third_page.dart';
 
 //============================page界面===============================================
 //firstPage 第一个模块用到的路由：------------------------------------
+//widget 路由
+export 'widgets/first_pages/widgets/loading_json_assets_age.dart';
+
 //layout 路由:
 export 'widgets/first_pages/layout/grid_view_page.dart';
 export 'widgets/first_pages/layout/table_page.dart';
@@ -43,6 +52,9 @@ export 'widgets/first_pages/decorated/rotated_box_page.dart';
 //aimation 动画路由
 export 'widgets/first_pages/animation/animated_opactity_page.dart';
 export 'widgets/first_pages/animation/hero_page1.dart';
+
+//third sdk
+export 'widgets/third_pages/chat_page.dart';
 
 //IOS 风格模块 路由=========================================================================
 export 'widgets/second_pages/cupertino.dart';

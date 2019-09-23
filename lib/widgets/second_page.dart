@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 //展示列表数据
-final _items = <ListItem>[
-  new ListItem("CupertinoActivityIndicator组件", "CupertinoActivityIndicator"),
-  new ListItem("CupertinoAlertDialog组件", "CupertinoAlertDialog"),
-  new ListItem("CupertinoButton组件", "CupertinoButton"),
-  new ListItem("Cupertino导航组件集", "Cupertino"),
+final _items = <_ListItem>[
+  new _ListItem("CupertinoActivityIndicator组件", "CupertinoActivityIndicator"),
+  new _ListItem("CupertinoAlertDialog组件", "CupertinoAlertDialog"),
+  new _ListItem("CupertinoButton组件", "CupertinoButton"),
+  new _ListItem("Cupertino导航组件集", "Cupertino"),
 ];
 
 class SecondPage extends StatelessWidget {
@@ -46,9 +46,9 @@ class SecondPage extends StatelessWidget {
   }
 }
 
-class ListItem {
+class _ListItem {
   String title;
   String route;
 
-  ListItem(this.title, this.route);
+  _ListItem(this.title, this.route);
 }

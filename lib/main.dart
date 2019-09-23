@@ -1,9 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'widgets/home_page.dart';
 import 'routes.dart';
 
-//widget 路由
-import 'widgets/first_pages/widgets/loading_json_assets_age.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -11,6 +10,8 @@ void main() => runApp(MyApp());
 
 //Cupertino 跳转路由：
 final Map<String, WidgetBuilder> routes = {
+  "HomePage": (context) => HomePage(),
+
   "CupertinoActivityIndicator": (context) => CupertinoActivityInPage(),
   "CupertinoAlertDialog": (context) => CupertinoAlertDiaPage(),
   "CupertinoButton": (context) => CupertinoButtonPage(),
@@ -53,6 +54,9 @@ final Map<String, WidgetBuilder> routes = {
   //Animation 动画组件
   "AnimatedOpactityPage": (context) => AnimatedOpactityPage(),
   "HeroPage1": (context) => HeroPage1(),
+
+  //sdk
+  "ChatPage": (context) => ChatPage(),
 };
 
 class MyApp extends StatelessWidget {
@@ -60,8 +64,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return new MaterialApp(
-      theme: new ThemeData(platform: TargetPlatform.iOS),
-      home: HomePage(),
+      debugShowCheckedModeBanner: false,
+      title: "App",
+      theme: new ThemeData(
+        platform: TargetPlatform.iOS,
+        primaryColor: Colors.green,
+        scaffoldBackgroundColor: Color(0xffebebeb),
+      ),
+      home:new LoadingPage(),
       routes: routes,
     );
   }
