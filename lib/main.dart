@@ -2,8 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'routes.dart';
 
-
-
 void main() => runApp(MyApp());
 
 //Material 路由
@@ -57,6 +55,7 @@ final Map<String, WidgetBuilder> routes = {
 
   //sdk
   "ChatPage": (context) => ChatPage(),
+  "SearchPage": (context) => SearchPage(),
 };
 
 class MyApp extends StatelessWidget {
@@ -71,7 +70,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.green,
         scaffoldBackgroundColor: Color(0xffebebeb),
       ),
-      home:new LoadingPage(),
+      home: new LoadingPage(),
       routes: routes,
     );
   }

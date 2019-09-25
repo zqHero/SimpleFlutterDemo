@@ -16,7 +16,7 @@ export 'widgets/second_page.dart';
 export 'widgets/forth_page.dart';
 export 'widgets/third_page.dart';
 
-//============================page界面===============================================
+//============================page界面======================================================
 //firstPage 第一个模块用到的路由：------------------------------------
 //widget 路由
 export 'widgets/first_pages/widgets/loading_json_assets_age.dart';
@@ -56,8 +56,14 @@ export 'widgets/first_pages/animation/hero_page1.dart';
 //third sdk
 export 'widgets/third_pages/chat_page.dart';
 
-//IOS 风格模块 路由=========================================================================
+//secondPage 第二个模块 路由------------------------------------
 export 'widgets/second_pages/cupertino.dart';
 export 'widgets/second_pages/cupertino_activity_indictor.dart';
 export 'widgets/second_pages/cupertino_alert_dialog.dart';
 export 'widgets/second_pages/cupertino_button_page.dart';
+
+//thirdPage 第三个模块用到的路由：------------------------------------
+export 'widgets/third_pages/search_widget/search_page.dart';
+export 'widgets/third_pages/message_page.dart';
+export 'widgets/third_pages/contact_page.dart';
+export 'widgets/third_pages/personal_page.dart';
