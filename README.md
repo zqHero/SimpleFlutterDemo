@@ -50,8 +50,7 @@ A few resources to get you started if this is your first Flutter project:
    - [Dialog](#Dialog): 弹出框:</p>
     ![img](./lib/imgs/dialog.jpg)  
     
-    ![img](./lib/imgs/dialog2.jpg)  </p>
-
+   ![img](./lib/imgs/dialog2.jpg)  </p>
  ```   
 //popMenu
   Widget createPopMenus(BuildContext context) {
@@ -149,7 +148,6 @@ A few resources to get you started if this is your first Flutter project:
  [2,布局使用](#layout):
 
  ![img](./lib/imgs/layout.jpg)  </p>
-
 
    - [Align对齐布局](#Align)
 ```
