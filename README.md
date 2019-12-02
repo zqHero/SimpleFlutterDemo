@@ -273,17 +273,101 @@ child: new FittedBox(
 
  [4,基本动画](#animation) </p>
 
-   - [帧动画](#Image) </p>
-    
-   - [补间动画](#Button) </p>
-    
-   - [属性动画](#Dialog) </p>
+   - [渐变动画 AnimatedOpactity](#animation_1) </p>
+        ![img](./lib/imgs/animation_grandient.jpg)  </p>
+```dart in html
 
-- [网络请求](#net)
+class AnimatedOpactityPageState extends State<AnimatedOpactityPage> {
+  bool animationStart = false;
 
-    - [获取一个图片](#Image)
-    - [获取一个Json](#Button)
-    - [传参](#Dialog)
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return new Scaffold(
+      appBar: new AppBar(title: new Text("AnimatedOpactityPage")),
+      body: new Center(
+        child: new AnimatedOpacity(
+          opacity: animationStart ? 1.0 : 0,
+          duration: new Duration(seconds: 5),
+          child: new Container(
+            width: 300,
+            height: 300,
+            child: Image.asset("lib/imgs/demo.jpg"),
+          ),
+        ),
+      ),
+      floatingActionButton: new FloatingActionButton(
+        child: new Text(animationStart ? "close" : "start"),
+        onPressed: () {
+          setState(() {
+            animationStart = !animationStart;
+          });
+        },
+      ),
+    );
+  }
+}
+```
+
+   - [hero动画](#hero) </p>
+```dart in html
+class HeroPage1State extends State<HeroPage1> {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return new Scaffold(
+      appBar: new AppBar(title: new Text("HeroPage1")),
+      body: new Center(
+        child: new GestureDetector(
+          child: new Container(
+            width: 300,
+            height: 300,
+            child: new Hero(
+              tag: '第一章图片',
+              child: Image.asset("lib/imgs/demo.jpg"),
+            ),
+          ),
+          onTap: () {
+            Navigator.push(
+              context,
+              new MaterialPageRoute(builder: (_) {
+                return new HeroPage2();
+              }),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+//-----------------------------------------
+class HeroPage2State extends State<HeroPage2> {
+  bool animationStart = false;
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return new Scaffold(
+        appBar: new AppBar(title: new Text("HeroPage2")),
+        body: new Center(
+          child: new GestureDetector(
+            child: new Container(
+              width: 300,
+              height: 300,
+              child: new Hero(
+                tag: '第二章图片',
+                child: Image.asset("lib/imgs/demo.jpg"),
+              ),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+        ));
+  }
+}
+```
 
 ###[二,第三方库的使用](#second)
 
@@ -292,6 +376,12 @@ child: new FittedBox(
 - [codeScan](#layout)
 
 - [网络请求](#net)
+
+    - [获取一个图片](#Image)
+    
+    - [获取一个Json](#Button)
+    
+    - [传参](#Dialog)
 
 ###[三,设计模式Bloc](#third)
 
