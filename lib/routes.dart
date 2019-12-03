@@ -67,3 +67,5 @@ export 'widgets/third_pages/search_widget/search_page.dart';
 export 'widgets/third_pages/message_page.dart';
 export 'widgets/third_pages/contact_page.dart';
 export 'widgets/third_pages/personal_page.dart';
+
+export 'widgets/third_pages/redux/redux_page.dart';

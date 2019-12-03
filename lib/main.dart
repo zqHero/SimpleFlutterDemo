@@ -56,6 +56,8 @@ final Map<String, WidgetBuilder> routes = {
   //sdk
   "ChatPage": (context) => ChatPage(),
   "SearchPage": (context) => SearchPage(),
+
+  "ReduxPage": (context) => ReduxPage(),
 };
 
 class MyApp extends StatelessWidget {

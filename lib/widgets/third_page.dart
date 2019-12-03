@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class ThirdPage extends StatelessWidget {
   List<_ListItem> _items = <_ListItem>[
     new _ListItem("chatDemo", "ChatPage"),  //聊天界面
+    new _ListItem("redux", "ReduxPage"),  //Redux 的使用
   ];
 
   @override
